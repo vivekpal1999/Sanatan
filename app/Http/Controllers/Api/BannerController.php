@@ -77,7 +77,7 @@ public function store_banner(Request $request)
   
     public function destroy_banner($id)
     {
-        dd("hey");
+       
         $banner = Banner::findOrFail($id);
         $banner->delete();
 

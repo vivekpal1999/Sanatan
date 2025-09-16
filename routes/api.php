@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\BannerController;
-
+use App\Http\Controllers\Api\ProductBulkController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,3 +33,7 @@ Route::post('/banner', [BannerController::class, 'store_banner']);
 Route::get('/get_all_banner', [BannerController::class, 'index']);
 Route::put('/update_banner', [BannerController::class, 'update_banner']);
 Route::delete('/banners/{id}', [BannerController::class, 'destroy_banner']);
+
+// product route
+Route::post('/store',[ProductBulkController::class, 'store_product']);
+Route::get('/products', [ProductBulkController::class, 'index']);
